@@ -1,0 +1,7 @@
+1. Change Employee class as abstract and add abstract methods like calculatePay() with concrete methods like getEmployeeDetails(), 
+   etc. Extend this abstract class in subclasses - HourlyEmployee and SalariedEmployee. Allow the user to input details of employees 
+   and calculate their respective pay using the abstract class reference.
+2. Create an abstract class named Product with methods like getPrice() and getDescription(). Extend the abstract class in classes
+   representing different types of products such as ElectronicsProduct , ClothingProduct , and BookProduct . Display the details of
+   products and calculate the total price in a shopping cart.
+3. Change 'Movie' class to abstract class and add additional abstract methods in 'Movie' class and define them in the child classes

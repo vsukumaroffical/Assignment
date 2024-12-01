@@ -1,0 +1,40 @@
+import java.util.List;
+import java.util.ArrayList;
+
+class StateOfTicTacToe {
+    int full = 9;
+    int countX = 0 , countO = 0;
+    List<String> directions = new ArrayList<>();
+    public GameState determineState(String[] board) {
+        checkBoard(board);
+        int count = countX - countO;
+        if(count > 1) throw new IllegalArgumentException("Wrong turn order: X went twice");
+        if(count < 0) throw new IllegalArgumentException("Wrong turn order: O started");
+        if(directions.contains("XXX") && directions.contains("OOO"))throw new IllegalArgumentException
+            ("Impossible board: game should have ended after the game was won");
+        if(directions.contains("XXX") || directions.contains("OOO")) return GameState.WIN;
+        if(full == 9) return GameState.DRAW;
+        return GameState.ONGOING;
+    }
+    private void checkBoard(String []board) {
+        String col = "", diag1 = "" , diag2 = "";
+        for(int i =  0 ; i<3; i++) {
+            directions.add(board[i]);
+            diag1 += board[i].charAt(i);
+            diag2 += board[i].charAt(2-i);
+            col = "";
+            for(int j = 0; j < 3; j++) {
+                char c = board[j].charAt(i);
+                col += c;
+                if(c == 'X') countX++;
+                if(c == 'O') countO++;
+                if(c == ' ') full--;
+            }
+            directions.add(col);
+        }
+        directions.add(diag1);
+        directions.add(diag2);
+        
+    }
+}
+

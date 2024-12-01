@@ -1,0 +1,30 @@
+package com.employee_management.main;
+
+import com.library.dto.Employee;
+import com.library.storage.EmployeeStorage;
+import java.util.*;
+
+public class Main {
+
+	public void loadDefaultEmployee(){
+	    Employee emp1 = new Employee(1, "Sukumar V", 23, "IT", 9677595469L, "sukumar@gmail.com");
+        Employee emp2 = new Employee(2, "Sasikumar", 27, "HR", 9876543210L, "sasi@gmail.com");
+        Employee emp3 = new Employee(3, "Charlie Brown", 28, "Finance", 1122334455L, "charlie@gmail.com");
+        Employee emp4 = new Employee(4, "Diana", 35, "Marketing", 9988776655L, "diana@gmail.com");
+        Employee emp5 = new Employee(5, "John", 40, "Operations", 2233445566L, "john@gmail.com");
+
+       EmployeeStorage.getInstance().insertBook(emp1));
+	   EmployeeStorage.getInstance().insertBook(emp2));
+	   EmployeeStorage.getInstance().insertBook(emp3));
+	   EmployeeStorage.getInstance().insertBook(emp4));
+	   EmployeeStorage.getInstance().insertBook(emp5));
+	}
+	public static void main(String args[]){
+		new Main().loadDefaultBooks();
+		List<Book> books = BookStorage.getInstance().getBookList(); 
+		for(Book book : books) {
+				book.displayBookDetails();
+		}
+	}
+
+}

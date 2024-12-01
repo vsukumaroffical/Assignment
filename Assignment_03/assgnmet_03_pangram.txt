@@ -1,0 +1,20 @@
+// link : https://exercism.org/tracks/java/exercises/pangram/edit
+public class PangramChecker {
+
+    public boolean isPangram(String input) {
+       int alphabets[] = new int[26];
+
+        for(char character : input.toCharArray()) {
+            if(Character.isAlphabetic(character)) {
+                character = Character.toUpperCase(character);
+                alphabets[character - 'A']++;
+            }
+        }
+        for(int  count : alphabets) {
+            if(count == 0) return false;
+        }
+       return true;
+    }
+   
+
+}

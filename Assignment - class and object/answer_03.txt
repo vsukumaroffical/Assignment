@@ -1,0 +1,108 @@
+3.Create Flight DTO class. Create appropriate instance variables, static variables and methods with appropriate access modifiers.
+
+public class Flight {
+    
+    
+    private static int nextId = 1;
+
+    
+    private int flightId;
+    private String airlineName;
+    private String departureCity;
+    private String destinationCity;
+    private String departureTime;
+    private String arrivalTime;
+    private int capacity;
+    private double price;
+
+   
+    public FlightDTO(String airlineName, String departureCity, String destinationCity, String departureTime,
+                     String arrivalTime, int capacity, double price) {
+        this.flightId = nextId++;
+        this.airlineName = airlineName;
+        this.departureCity = departureCity;
+        this.destinationCity = destinationCity;
+        this.departureTime = departureTime;
+        this.arrivalTime = arrivalTime;
+        this.capacity = capacity;
+        this.price = price;
+    }
+
+  
+    public int getFlightId() {
+        return flightId;
+    }
+
+    public String getAirlineName() {
+        return airlineName;
+    }
+
+    public void setAirlineName(String airlineName) {
+        this.airlineName = airlineName;
+    }
+
+    public String getDepartureCity() {
+        return departureCity;
+    }
+
+    public void setDepartureCity(String departureCity) {
+        this.departureCity = departureCity;
+    }
+
+    public String getDestinationCity() {
+        return destinationCity;
+    }
+
+    public void setDestinationCity(String destinationCity) {
+        this.destinationCity = destinationCity;
+    }
+
+    public String getDepartureTime() {
+        return departureTime;
+    }
+
+    public void setDepartureTime(String departureTime) {
+        this.departureTime = departureTime;
+    }
+
+    public String getArrivalTime() {
+        return arrivalTime;
+    }
+
+    public void setArrivalTime(String arrivalTime) {
+        this.arrivalTime = arrivalTime;
+    }
+
+    public int getCapacity() {
+        return capacity;
+    }
+
+    public void setCapacity(int capacity) {
+        this.capacity = capacity;
+    }
+
+    public double getPrice() {
+        return price;
+    }
+
+    public void setPrice(double price) {
+        this.price = price;
+    }
+
+   
+    public static void resetFlightIdCounter() {
+        nextId = 1;
+    }
+
+    
+    public void displayFlightInfo() {
+        System.out.println("Flight ID: " + flightId);
+        System.out.println("Airline: " + airlineName);
+        System.out.println("From: " + departureCity);
+        System.out.println("To: " + destinationCity);
+        System.out.println("Departure Time: " + departureTime);
+        System.out.println("Arrival Time: " + arrivalTime);
+        System.out.println("Capacity: " + capacity);
+        System.out.println("Price: $" + price);
+    }
+}

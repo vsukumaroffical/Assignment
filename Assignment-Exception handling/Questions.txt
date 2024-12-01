@@ -1,0 +1,4 @@
+1. Write a program for division with proper divide-by-zero exception handling
+2. Create a custom Exception by yourself and try throwing and catching the same.
+3. Create a program to get phone number from the user and throw InputMismatchException if the user enters non-number input
+4. Create multiple classes to imitate a bank structure with proper Exception Handling. For eg., if the user tries to withdraw more than the balance, throw "InsufficientBalanceException" (created customly)

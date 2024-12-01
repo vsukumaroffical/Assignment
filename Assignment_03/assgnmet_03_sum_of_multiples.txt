@@ -1,0 +1,27 @@
+// Link : https://exercism.org/tracks/java/exercises/sum-of-multiples/edit
+import java.util.*;
+class SumOfMultiples {
+    
+    HashSet<Integer> energyPoints = new  HashSet<>();
+    int number  ;
+    int[] set;
+    SumOfMultiples(int number, int[] set) {  
+         this.number = number;
+         this.set = set;
+    }
+    
+    int getSum() {
+        int sum = 0;
+        for(int value : set ) {
+            if(value == 0) continue;
+            for(int i = value; i < number; i +=value ){
+                energyPoints.add(i);
+            }
+        }
+        for(int point : energyPoints) {
+            sum += point;
+        }
+        return sum;
+    }
+
+}

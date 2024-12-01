@@ -1,0 +1,6 @@
+1. Design a library management system using packages. Create packages such as library.books , library.members , and library.transactions .
+   Implement classes within these packages to represent books, members, and transactions. Demonstrate the usage of packages to organize the 
+   code logically.
+2. Design a university management system with packages. Create packages like university.students , university.courses , and university.
+   faculty . Implement classes within these packages to represent students, courses, and faculty members. Utilize packages to structure the
+   code based on the functionality.

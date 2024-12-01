@@ -1,0 +1,25 @@
+// link : https://exercism.org/tracks/java/exercises/acronym/edit
+class Acronym {
+String phrase;
+    Acronym(String phrase) {
+       this.phrase = phrase;
+    }
+
+    String get() {
+        StringBuilder answer = new StringBuilder();
+        boolean isAppend = true;
+        for(char c : phrase.toCharArray()) {
+            if(Character.isLetter(c) && isAppend) {
+                answer.append(Character.toUpperCase(c));
+                isAppend = false; 
+            }else if(isPunctuation(c) && !isAppend){
+                 isAppend = true;
+            }   
+        }
+        return answer.toString();
+    }
+     private boolean isPunctuation(char c) {
+         return c =='-' || c == ' '  || c == '_';
+     }
+
+}
